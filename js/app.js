@@ -5,8 +5,8 @@ $(document).ready( function() {
 
   // Show spoiler text
   $('.spoiler').on('click', 'button', function(event) {
-    $(event.target).prev().show();
-    $(event.target).hide();
+    $(this).prev().show();
+    $(this).hide();
   });
 
   // Append to page

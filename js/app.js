@@ -4,9 +4,9 @@ $(document).ready( function() {
   const $button = $('<button>Reveal Spoiler</button>');
 
   // Show spoiler text
-  $('.spoiler').on('click', 'button', function() {
-    $('.spoiler span').show();
-    $('.spoiler button').hide();
+  $('.spoiler').on('click', 'button', function(event) {
+    $(event.target).prev().show();
+    $(event.target).hide();
   });
 
   // Append to page

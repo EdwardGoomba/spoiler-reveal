@@ -1,11 +1,20 @@
 $(document).ready( function() {
-  // Hide spoiler on page load
-  $('.spoiler span').hide();
+
+  // Create reveal spoiler button
+  const $button = $('<button>Reveal Spoiler</button>');
 
   // Show spoiler text
-  $('.spoiler button').click(function() {
+  $('.spoiler').on('click', 'button', function() {
     $('.spoiler span').show();
     $('.spoiler button').hide();
   });
+
+  // Append to page
+  $('.spoiler').append($button);
+
+  // Hide spoiler on page load
+  $('.spoiler span').hide();
+
+
 
 });
